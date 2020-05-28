@@ -1,5 +1,6 @@
 <script>
   import Hotel from "./components/Hotel.svelte";
+  import Search from "./components/SearchBar.svelte";
 
   let hotels = [];
   let roomTypes = [];
@@ -35,7 +36,10 @@
 </style>
 
 <main>
-  {#each hotels as hotel}
-    <Hotel {...hotel} />
-  {/each}
+  <div class="container mt-4">
+    <Search />
+    {#each hotels as hotel}
+      <Hotel {...hotel} />
+    {/each}
+  </div>
 </main>
